@@ -8,6 +8,8 @@ import CategoryPage from './components/CategoryPage/CategoryPage';
 import logo from './logo.svg';
 import CartWidget from './components/CartWidget/CartWidget';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         <Route path='/Products/:category/:itemId' element={<Item/>}/>
         
       </Routes>
+      <ToastContainer />
     </BrowserRouter>
   )
 }

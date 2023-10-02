@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import './Item.css'
 import { useParams } from 'react-router-dom'
 import { getItemById } from '../../Helpers/Items'
-
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 
 const Item = () => {
@@ -10,15 +11,15 @@ const Item = () => {
 
   const [quantity, setQuantity] = useState(1)
 
-  const [confirmationMessage, setConfirmationMessage] = useState('')
-
   const handleQuantityChange = (event) => {
     const newQuantity = parseInt(event.target.value)
     setQuantity(newQuantity)
   }
 
-  const addToCart = () => {
-
+  const addToCart = (product) => {
+    toast.success(`${product.nombre} ha sido agregado al carrito.`, {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    })
   }
 
   const product = getItemById(itemId)
@@ -39,8 +40,7 @@ const Item = () => {
             onChange={handleQuantityChange}
           />
         </label>
-        <button className="btn-carrito" onClick={addToCart}> Agregar al carrito</button>
-        {confirmationMessage && <p>{confirmationMessage}</p>}
+        <button className="btn-carrito" onClick={() => addToCart(product)}> Agregar al carrito</button>
 
       </div>
     </div>

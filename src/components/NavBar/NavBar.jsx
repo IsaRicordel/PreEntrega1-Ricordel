@@ -8,7 +8,9 @@ import logoimg from '../../Img/logo-altitude.png'
 const NavBar = () => {
   return (
     <div style={styles.NavBar}>
-        <img className="imglogo" src={logoimg} alt="logo-altitude" width={120} height={70} />
+        <Link to="/">
+          <img className="imglogo" src={logoimg} alt="logo-altitude" width={120} height={70} />
+        </Link>
       
         <div style={styles.Links}>
           <Link style={styles.Link} to={"/"}> Home </Link>
