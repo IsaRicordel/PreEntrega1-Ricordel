@@ -13,7 +13,7 @@ const Item = () => {
       <div className="eproductos" style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
         <p> {product.nombre} </p>
         <p> {product.marca} </p>
-        <img src={product.rutaImagen} alt='img-product-card'/>
+        <img src={product.rutaImagen} alt='img-product-card' width={150}/>
         <p> ${product.precio} </p>
         <button className="btn-carrito"> Agregar al carrito</button>
 

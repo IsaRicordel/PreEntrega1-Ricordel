@@ -1,4 +1,13 @@
 import React from 'react'
+import miuraimg from '../Img/miura-lasportiva.jpg'
+import katanaimg from '../Img/katana-lasportiva.jpg'
+import otakiimg from '../Img/otaki-lasportiva.jpg'
+import selenaimg from '../Img/selena-petzl.jpeg'
+import rayimg from '../Img/ray-singingrock.jpg'
+import jayne3img from '../Img/jayne3-edelrid.jpg'
+import coltimg from '../Img/colt-singingrock.jpg'
+import linkimg from '../Img/link-edelweiss.jpg'
+import argonimg from '../Img/kong-mosqueton.jpg'
 
 export const Items = [
   { 
@@ -8,7 +17,7 @@ export const Items = [
     categoria: 'Pédulas', 
     precio: 80000, 
     stock: 87, 
-    rutaImagen: 'miura-lasportiva.jpg' 
+    rutaImagen: miuraimg 
 },
 { 
     id: 2, 
@@ -17,7 +26,7 @@ export const Items = [
     categoria: 'Pédulas', 
     precio: 100000, 
     stock: 150, 
-    rutaImagen: 'katana-lasportiva.jpg' 
+    rutaImagen: katanaimg
 },
 { 
     id: 3, 
@@ -26,7 +35,7 @@ export const Items = [
     categoria: 'Pédulas', 
     precio: 101000, 
     stock: 237, 
-    rutaImagen: 'otaki-lasportiva.jpg' 
+    rutaImagen: otakiimg
 },
 { 
     id: 4, 
@@ -35,7 +44,7 @@ export const Items = [
     categoria: 'Arneses', 
     precio: 40000, 
     stock: 132, 
-    rutaImagen: 'selena-petzl.jpeg'
+    rutaImagen: selenaimg
 },
 { 
     id: 5, 
@@ -44,7 +53,7 @@ export const Items = [
     categoria: 'Arneses', 
     precio: 45000, 
     stock: 103, 
-    rutaImagen: 'ray-singingrock.jpg' 
+    rutaImagen: rayimg
 },
 { 
     id: 6, 
@@ -53,7 +62,7 @@ export const Items = [
     categoria: 'Arneses', 
     precio: 60000, 
     stock: 85, 
-    rutaImagen: 'jayne3-edelrid.jpg'
+    rutaImagen: jayne3img
 },
 { 
     id: 7, 
@@ -62,7 +71,7 @@ export const Items = [
     categoria: 'Mosquetones', 
     precio: 7500, 
     stock: 326, 
-    rutaImagen: 'colt-singingrock.jpg' 
+    rutaImagen: coltimg
 },
 { 
     id: 8, 
@@ -71,7 +80,7 @@ export const Items = [
     categoria: 'Mosquetones', 
     precio: 10000, 
     stock: 125, 
-    rutaImagen: 'link-edelweiss.jpg'
+    rutaImagen: linkimg
 },
 { 
     id: 9, 
@@ -80,7 +89,7 @@ export const Items = [
     categoria: 'Mosquetones', 
     precio: 13000, 
     stock: 238, 
-    rutaImagen: 'kong-mosqueton.jpg' 
+    rutaImagen: argonimg
 },
 ]
 

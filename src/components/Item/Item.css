@@ -3,16 +3,22 @@
 }
 
 .eproductos {
-    width: 14%;
+    width: 20%;
     border: 2px solid #ffe4c4;
     border-radius: 10px;
-    margin: 1px;
+    margin-top: 50px;
 }
 
 .btn-carrito{
     background-color: #4CAF50; 
     color: white; 
     border: none; 
-    padding: 10px 44px;
+    padding: 10px 31%;
     cursor: pointer;
 }
+
+.btn-carrito:hover {
+    background-color: #45a049;
+}
+
+
