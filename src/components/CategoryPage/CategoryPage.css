@@ -1,0 +1,15 @@
+.product-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.product-item{
+    width: 15%;
+    border: 2px solid #ffe4c4;
+    border-radius: 10px;
+    margin-top: 50px;
+    text-align: center;
+}

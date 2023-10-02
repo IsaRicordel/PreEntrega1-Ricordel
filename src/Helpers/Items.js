@@ -14,7 +14,7 @@ export const Items = [
     id: 1, 
     nombre: 'Miura',
     marca: 'La Sportiva', 
-    categoria: 'Pédulas', 
+    categoria: 'Pedulas', 
     precio: 80000, 
     stock: 87, 
     rutaImagen: miuraimg 
@@ -23,7 +23,7 @@ export const Items = [
     id: 2, 
     nombre: 'Katana', 
     marca: 'La Sportiva', 
-    categoria: 'Pédulas', 
+    categoria: 'Pedulas', 
     precio: 100000, 
     stock: 150, 
     rutaImagen: katanaimg
@@ -32,7 +32,7 @@ export const Items = [
     id: 3, 
     nombre: 'Otaki', 
     marca: 'La Sportiva', 
-    categoria: 'Pédulas', 
+    categoria: 'Pedulas', 
     precio: 101000, 
     stock: 237, 
     rutaImagen: otakiimg
