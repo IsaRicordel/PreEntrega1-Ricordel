@@ -10,20 +10,32 @@ import CartWidget from './components/CartWidget/CartWidget';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { CarritoProvider } from './Context/CarritoContext';
 
 function App() {
+  
   return (
-    <BrowserRouter className='App'> 
+    <BrowserRouter className='App'>
       <NavBar />
+      <CarritoProvider>
+
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/Cart' element={<Cart/>}/>
         <Route path='/Products' element={<Products/>}/>
+        <Route 
+          path='/Cart' 
+          element={<Cart />}
+        />
+        
         <Route path='/Products/:category' element={<CategoryPage/>}/>
-        <Route path='/Products/:category/:itemId' element={<Item/>}/>
+        <Route 
+          path='/Products/:category/:itemId' 
+          element={<Item />}
+        />
         
       </Routes>
       <ToastContainer />
+      </CarritoProvider>
     </BrowserRouter>
   )
 }

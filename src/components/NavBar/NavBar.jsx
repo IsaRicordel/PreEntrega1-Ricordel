@@ -14,13 +14,15 @@ const NavBar = () => {
       
         <div style={styles.Links}>
           <Link style={styles.Link} to={"/"}> Home </Link>
-          <Link style={styles.Link} to={"/Cart"}> Cart </Link>
           <Link style={styles.Link} to={"/Products"}> Products </Link>
+          <Link style={styles.Link} to={"/Cart"}> 
+            <div style={styles.CartWidget}>
+            <CartWidget></CartWidget>
+            </div>
+          </Link>
         </div>
 
-        <div style={styles.CartWidget}>
-          <CartWidget></CartWidget>
-        </div>
+
 
     </div>
   )
@@ -49,9 +51,6 @@ const styles = {
     textDecoration: 'none',
   },
 
-  CartWidget: {
-    padding: '2rem',
-  }
 }
 
 export default NavBar;
