@@ -1,0 +1,11 @@
+.cart-item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cart-item-btn{
+    background-color: rgb(19, 152, 19);
+    color: white;
+    border-radius: 5px;
+}

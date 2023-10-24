@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useContext } from 'react'
+import { BsCart4 } from 'react-icons/bs'
+import { Badge } from 'react-bootstrap'
+import { CarritoContext } from '../../Context/CarritoContext'
 
 const CartWidget = () => {
-    return (
-        <>
-        <img src="https://static.vecteezy.com/system/resources/previews/019/787/018/non_2x/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.png" alt="icono de carrito" width={50} height={30} />
-        </>
+    const {cartQuantity} = useContext(CarritoContext)
+    return ( 
+        <div className="d-flex justify-content-around align-items-center">
+            <BsCart4 fontSize={'1.75rem'} color='black'/>
+            {cartQuantity() > 0 && <Badge bg="danger">{cartQuantity()}</Badge>}
+
+        </div>
     )
 }
 

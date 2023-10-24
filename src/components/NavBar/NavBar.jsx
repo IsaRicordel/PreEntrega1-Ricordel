@@ -1,6 +1,6 @@
 import React from 'react'
 import './NavBar.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
 import logoimg from '../../Img/logo-altitude.png'
 
@@ -17,7 +17,7 @@ const NavBar = () => {
           <Link style={styles.Link} to={"/Products"}> Products </Link>
           <Link style={styles.Link} to={"/Cart"}> 
             <div style={styles.CartWidget}>
-            <CartWidget></CartWidget>
+              <CartWidget/>
             </div>
           </Link>
         </div>
