@@ -3,6 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { initializeApp } from 'firebase/app';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBgc7PusVS_vwjUBm4I5HwdqJdPjCJPkDQ",
+  authDomain: "proyectofinal-react-ricordel.firebaseapp.com",
+  projectId: "proyectofinal-react-ricordel",
+  storageBucket: "proyectofinal-react-ricordel.appspot.com",
+  messagingSenderId: "363546992350",
+  appId: "1:363546992350:web:e28d6cd7b92edc5737ac4f"
+};
+
+initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

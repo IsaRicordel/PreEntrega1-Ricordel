@@ -1,6 +1,7 @@
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
 import Home from './Pages/Home/Home'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Products from './Pages/Products/Products'
 import Cart from './Pages/Cart/Cart'
 import Item from './components/Item/Item'
@@ -19,7 +20,7 @@ function App() {
       <NavBar />
 
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<ItemListContainer/>}/>
         <Route path='/Products' element={<Products/>}/>
         <Route path='/Cart' element={<Cart />}/>
         

@@ -1,56 +1,38 @@
 import React from 'react'
 import './NavBar.css'
-import { Link } from 'react-router-dom'
-import CartWidget from '../CartWidget/CartWidget'
 import logoimg from '../../Img/logo-altitude.png'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import { NavLink } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import CartWidget from '../CartWidget/CartWidget'
 
-
-const NavBar = () => {
+function NavBar () {
   return (
-    <div style={styles.NavBar}>
-        <Link to="/">
-          <img className="imglogo" src={logoimg} alt="logo-altitude" width={120} height={70} />
-        </Link>
-      
-        <div style={styles.Links}>
-          <Link style={styles.Link} to={"/"}> Home </Link>
-          <Link style={styles.Link} to={"/Products"}> Products </Link>
-          <Link style={styles.Link} to={"/Cart"}> 
-            <div style={styles.CartWidget}>
-              <CartWidget/>
-            </div>
-          </Link>
-        </div>
-
-
-
-    </div>
+      <Navbar expand="lg" className="bg-body-tertiary" style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+          <Container>
+            <Navbar.Brand as={NavLink} to='/'>
+                <img className="imglogo" src={logoimg} alt="logo-altitude" width={120} height={70} />      
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                  <Nav.Link as={NavLink} to='/'> Home </Nav.Link>
+                  <NavDropdown title="Productos" id="basic-nav-dropdown" to='/Products'>
+                    <NavDropdown.Item as={NavLink} to='/Products/pedulas' > Pédulas </NavDropdown.Item>
+                    <NavDropdown.Item as={NavLink} to='/Products/arneses' > Arneses </NavDropdown.Item>
+                    <NavDropdown.Item as={NavLink} to='/Products/mosquetones' > Mosquetones </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item as={NavLink} to='/Products'> Todos los productos </NavDropdown.Item>
+                  </NavDropdown>
+                </Nav>
+              <NavLink to='/Cart'> <CartWidget/> </NavLink>
+            </Navbar.Collapse>
+          </Container>
+      </Navbar>
   )
-}
-
-const styles = {
-  NavBar: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    paddingLeft: '30px',
-    backgroundColor: '#ffe4c4',
-    borderBottom: "1px solid #f2b9af",
-  },
-
-  Links: {
-    width: '30%',
-    display: 'flex',
-    padding: '2.5rem',
-    justifyContent: 'space-between',
-  },
-
-  Link: {
-    color: 'black',
-    fontSize: 18,
-    fontWeight: 600,
-    textDecoration: 'none',
-  },
-
 }
 
 export default NavBar;

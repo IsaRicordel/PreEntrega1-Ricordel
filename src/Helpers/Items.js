@@ -17,7 +17,8 @@ export const Items = [
     categoria: 'Pedulas', 
     precio: 80000, 
     stock: 87, 
-    rutaImagen: miuraimg 
+    rutaImagen: miuraimg,
+    descripcion: 'La Sportiva Miura Mujer Cordones'
 },
 { 
     id: 2, 
@@ -26,7 +27,9 @@ export const Items = [
     categoria: 'Pedulas', 
     precio: 100000, 
     stock: 150, 
-    rutaImagen: katanaimg
+    rutaImagen: katanaimg,
+    descripcion: 'La Sportiva Katana Laces Mujer'
+
 },
 { 
     id: 3, 
@@ -35,7 +38,8 @@ export const Items = [
     categoria: 'Pedulas', 
     precio: 101000, 
     stock: 237, 
-    rutaImagen: otakiimg
+    rutaImagen: otakiimg,
+    descripcion: 'La Sportiva Otaki'
 },
 { 
     id: 4, 
@@ -44,7 +48,9 @@ export const Items = [
     categoria: 'Arneses', 
     precio: 40000, 
     stock: 132, 
-    rutaImagen: selenaimg
+    rutaImagen: selenaimg,
+    descripcion: 'Petzl Selena'
+
 },
 { 
     id: 5, 
@@ -53,7 +59,9 @@ export const Items = [
     categoria: 'Arneses', 
     precio: 45000, 
     stock: 103, 
-    rutaImagen: rayimg
+    rutaImagen: rayimg,
+    descripcion: 'Singing Rock Ray Arnés de Escalada'
+
 },
 { 
     id: 6, 
@@ -62,7 +70,9 @@ export const Items = [
     categoria: 'Arneses', 
     precio: 60000, 
     stock: 85, 
-    rutaImagen: jayne3img
+    rutaImagen: jayne3img,
+    descripcion: 'Edelrid Arnés Jayne 3 Mujer'
+
 },
 { 
     id: 7, 
@@ -71,7 +81,8 @@ export const Items = [
     categoria: 'Mosquetones', 
     precio: 7500, 
     stock: 326, 
-    rutaImagen: coltimg
+    rutaImagen: coltimg,
+    descripcion: 'Singing Rock Colt Negro'
 },
 { 
     id: 8, 
@@ -80,7 +91,9 @@ export const Items = [
     categoria: 'Mosquetones', 
     precio: 10000, 
     stock: 125, 
-    rutaImagen: linkimg
+    rutaImagen: linkimg,
+    descripcion: 'Edelweiss Link Azul'
+
 },
 { 
     id: 9, 
@@ -89,7 +102,9 @@ export const Items = [
     categoria: 'Mosquetones', 
     precio: 13000, 
     stock: 238, 
-    rutaImagen: argonimg
+    rutaImagen: argonimg,
+    descripcion: 'Kong Argon S Black'
+
 },
 ]
 
