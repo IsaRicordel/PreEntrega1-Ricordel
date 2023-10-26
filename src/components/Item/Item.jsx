@@ -8,20 +8,33 @@ import { useParams } from 'react-router-dom'
 const Item = () => {
 
   const [item, setItem]= useState({})
+  const [productExists, setProductExists] = useState(true)
   const { id } = useParams()
 
     useEffect(()=>{
         const collectionProd = collection(db, 'Items')
         const referenciaAlDoc = doc(collectionProd, id)
         getDoc(referenciaAlDoc)
-        .then((res)=> setItem({id:res.id, ...res.data()}))
+        .then((res)=> {
+            if(res.exists()) {
+            setItem({ id:res.id, ...res.data() })
+          } else {
+            setProductExists(false)
+          }
+        })  
         .catch((error)=> console.log(error))     
-    },[])
+    },[id])
 
-    return (
-      <div>
+  return (
+    <div>
+      {productExists ? (
         <ItemDetail item={item}/>
-      </div>
-    )
+      ) : (
+        <div>
+          <p> El producto no existe. </p>
+        </div>
+      )}
+    </div>
+  )
 }
 export default Item 
