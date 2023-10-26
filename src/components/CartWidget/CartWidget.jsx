@@ -8,7 +8,7 @@ const CartWidget = () => {
     return ( 
         <div className="d-flex justify-content-around align-items-center">
             <BsCart4 fontSize={'1.75rem'} color='black'/>
-            {cartQuantity() > 0 && <Badge bg="danger">{cartQuantity()}</Badge>}
+            {cartQuantity() > 0 && <Badge bg="danger" className="custom-badge">{cartQuantity()}</Badge>}
 
         </div>
     )

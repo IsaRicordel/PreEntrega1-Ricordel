@@ -3,6 +3,7 @@ import './ItemListContainer.css'
 import { Link } from 'react-router-dom'
 import { collection,  getDocs, query, where } from "firebase/firestore"
 import {db} from '../../index'
+import GridLoader from "react-spinners/GridLoader"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
@@ -46,7 +47,11 @@ function ItemListContainer({category, greeting}) {
                 <div className="item-list-container" style={{fontSize: '14px'}}>
                 {isLoading ? (
                         <div className="spinner-container">
-                            <FontAwesomeIcon icon={faSpinner} spin style={{justifyContent: 'center', fontSize: '40', color: "#24761e"}} />
+                           <GridLoader
+                                color={'#58a759'}
+                                loading={isLoading}
+                                size={15}
+                            />
                         </div>
                 ) : (
                 items.map((item) => (
