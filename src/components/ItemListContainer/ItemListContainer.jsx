@@ -1,19 +1,45 @@
 import React, { useEffect, useState } from 'react'
 import './ItemListContainer.css'
-import { Link, useParams } from 'react-router-dom'
-import { Items } from '../../Helpers/Items'
+import { Link } from 'react-router-dom'
+import { collection,  getDocs, query, where } from "firebase/firestore"
+import {db} from '../../index'
 
-function ItemListContainer() {
+function ItemListContainer({category}) {
+
+    const [items, setItems]= useState([])
+
+     //se crea la funcion para poder hacer el filtro ya que el dato en Firebase esta en mayuscula
+     function primeraLetraMayuscula(cadena) {
+        // Convierte la primera letra a mayúscula y el resto a minúsculas
+        return cadena.charAt(0).toUpperCase() + cadena.slice(1).toLowerCase();
+      }
+    useEffect(()=>{
+        const coleccionProductos = category? query(collection(db, "Items"), where("categoria", "==", primeraLetraMayuscula(category))):collection(db, "Items")
+        getDocs(coleccionProductos)
+        .then((res)=> {
+            const list = res.docs.map((product)=>{
+                return{
+                    id:product.id,
+                    ...product.data()
+                }
+            })
+            setItems(list)
+        })
+        .catch((error)=> console.log(error))
+      
+    },[category])
 
     return (
         <div className="item-list-container">
-            {Items.map((item) => (
+            {items.map((item) => (
             <div key={item.id} className="card">
                 <img src={item.rutaImagen} alt={item.nombre} width={130} />
                 <h3>{item.marca}</h3>
                 <p>{item.descripcion}</p>
                 <p>${item.precio}</p>
-                <Link to={`/Products/${item.categoria}/${item.id}`}>Ver más</Link>
+                <Link to={`/Products/${item.categoria}/${item.id}`}>
+                    <button className="btn btn-dark">Ver más</button>
+                </Link>
             </div>
             ))}
       </div>
@@ -21,27 +47,3 @@ function ItemListContainer() {
   }
 
 export default ItemListContainer
-
-/* const ItemListContainer = () => {
-    const [productos, setProductos] = useState([])
-    const [loading, setLoading] = useState(false)
-    const {itemId} = useParams ()
-
-    useEffect(()=> {
-        setLoading(true)
-        getProducts()
-        .then((res)=> {
-           if(categoryId) {
-                setProductos(res.filter((item) => item.categoria === itemId))
-           }else{
-                setProductos(res)
-           }
-        })
-        .catch((error)=> console.log(error))
-        .finally(()=> setloading(false))
-    }, [itemId])
-
-    return (
-
-    )
-} */

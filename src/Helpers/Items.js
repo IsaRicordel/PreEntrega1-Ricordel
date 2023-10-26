@@ -1,13 +1,13 @@
 import React from 'react'
-import miuraimg from '../Img/miura-lasportiva.jpg'
-import katanaimg from '../Img/katana-lasportiva.jpg'
-import otakiimg from '../Img/otaki-lasportiva.jpg'
-import selenaimg from '../Img/selena-petzl.jpeg'
-import rayimg from '../Img/ray-singingrock.jpg'
-import jayne3img from '../Img/jayne3-edelrid.jpg'
-import coltimg from '../Img/colt-singingrock.jpg'
-import linkimg from '../Img/link-edelweiss.jpg'
-import argonimg from '../Img/kong-mosqueton.jpg'
+import miuraimg from '../../public/img/miura-lasportiva.jpg'
+import katanaimg from '../../public/img/katana-lasportiva.jpg'
+import otakiimg from '../../public/img/otaki-lasportiva.jpg'
+import selenaimg from '../../public/img/selena-petzl.jpeg'
+import rayimg from '../../public/img/ray-singingrock.jpg'
+import jayne3img from '../../public/img/jayne3-edelrid.jpg'
+import coltimg from '../../public/img/colt-singingrock.jpg'
+import linkimg from '../../public/img/link-edelweiss.jpg'
+import argonimg from '../../public/img/kong-mosqueton.jpg'
 
 export const Items = [
   { 

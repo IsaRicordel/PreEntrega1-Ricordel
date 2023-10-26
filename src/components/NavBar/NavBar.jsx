@@ -14,7 +14,7 @@ function NavBar () {
       <Navbar expand="lg" className="bg-body-tertiary" style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           <Container>
             <Navbar.Brand as={NavLink} to='/'>
-                <img className="imglogo" src={logoimg} alt="logo-altitude" width={120} height={70} />      
+                <img className="imglogo" src={logoimg} alt="logo-altitude" width={120} height={100} width={140}/>      
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

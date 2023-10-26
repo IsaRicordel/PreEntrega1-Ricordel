@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
+import './ItemCount.css'
 import { Button } from 'react-bootstrap'
 
 const ItemCount = ({stock, onAdd, initial}) => {
     const [count, setCount] = useState(initial)
+
         const sumar = () => {
             if(count < stock){
                 setCount(count + 1)
@@ -14,6 +16,10 @@ const ItemCount = ({stock, onAdd, initial}) => {
             }
         }
 
+        const addToCart = () => {
+            onAdd(count)
+          }
+
     return(
         <div className="d-flex flex-column align-item-center justify-content-between">
             <div>
@@ -21,8 +27,7 @@ const ItemCount = ({stock, onAdd, initial}) => {
                 <span className="btn">{count}</span>
                 <Button variant='dark' onClick={sumar}>+</Button>
             </div>
-            <Button className="mt-2" variant='btn' disabled={count == 0} onClick={()=>onAdd(count)}> Comprar </Button>
-
+            <Button className="btn-ic-addtocart"variant="dark" onClick={addToCart}>Agregar al carrito</Button>
         </div>
     )
 }

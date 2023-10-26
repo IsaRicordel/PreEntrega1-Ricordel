@@ -1,0 +1,13 @@
+.item-detail {
+    text-align: center;
+    width: 20%;
+    border: 2px solid #ffe4c4;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.item-detail-image {
+    width: 20%;
+    margin-top: 50px;
+}
+

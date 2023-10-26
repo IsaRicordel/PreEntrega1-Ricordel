@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBgc7PusVS_vwjUBm4I5HwdqJdPjCJPkDQ",
@@ -14,7 +15,8 @@ const firebaseConfig = {
   appId: "1:363546992350:web:e28d6cd7b92edc5737ac4f"
 };
 
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig)
+export const db = getFirestore(app)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

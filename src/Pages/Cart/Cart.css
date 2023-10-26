@@ -1,0 +1,23 @@
+.btn-cart1 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-cart2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+}
+.btn-cart3 {
+    margin: 50px
+}
+
+.total-pagar-carrito {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+} 
