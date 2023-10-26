@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { collection,  getDocs, query, where } from "firebase/firestore"
 import {db} from '../../index'
 
-function ItemListContainer({category}) {
+function ItemListContainer({category, greeting}) {
 
     const [items, setItems]= useState([])
 
@@ -30,19 +30,23 @@ function ItemListContainer({category}) {
     },[category])
 
     return (
-        <div className="item-list-container">
-            {items.map((item) => (
-            <div key={item.id} className="card">
-                <img src={item.rutaImagen} alt={item.nombre} width={130} />
-                <h3>{item.marca}</h3>
-                <p>{item.descripcion}</p>
-                <p>${item.precio}</p>
-                <Link to={`/Products/${item.categoria}/${item.id}`}>
-                    <button className="btn btn-dark">Ver más</button>
-                </Link>
+        <>
+            <div> <h2> {greeting} </h2></div>
+                
+                <div className="item-list-container">
+                {items.map((item) => (
+                <div key={item.id} className="card">
+                    <img src={item.rutaImagen} alt={item.nombre} width={130} />
+                    <h3>{item.marca}</h3>
+                    <p>{item.descripcion}</p>
+                    <p>${item.precio}</p>
+                    <Link to={`/Products/${item.categoria}/${item.id}`}>
+                        <button className="btn btn-dark">Ver más</button>
+                    </Link>
+                </div>
+                ))}
             </div>
-            ))}
-      </div>
+        </>
     )
   }
 
