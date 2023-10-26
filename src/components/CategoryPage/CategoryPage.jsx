@@ -9,8 +9,8 @@ const CategoryPage = () => {
   const { category } = useParams()
 
   return (
-      <div>
-        <h2>Productos de la categoría: {category}</h2>
+      <div> 
+        <h4 className="cp">Productos de la categoría: {category}</h4>
         <ItemListContainer category={category} />
       </div>
     )

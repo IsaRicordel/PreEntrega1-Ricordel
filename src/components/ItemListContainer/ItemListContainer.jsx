@@ -31,7 +31,7 @@ function ItemListContainer({category, greeting}) {
 
     return (
         <>
-            <div> <h2> {greeting} </h2></div>
+            <div> <h3 style={{textAlign: 'center', marginTop: '20px'}}> {greeting} </h3></div>
                 
                 <div className="item-list-container">
                 {items.map((item) => (

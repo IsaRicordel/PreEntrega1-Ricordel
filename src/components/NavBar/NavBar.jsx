@@ -14,13 +14,13 @@ function NavBar () {
       <Navbar expand="lg" className="bg-body-tertiary" style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           <Container>
             <Navbar.Brand as={NavLink} to='/'>
-                <img className="imglogo" src={logoimg} alt="logo-altitude" width={120} height={100} width={140}/>      
+                <img className="imglogo" src={logoimg} alt="logo-altitude" width={150} height={100}/>      
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                  <Nav.Link as={NavLink} to='/'> Home </Nav.Link>
-                  <NavDropdown title="Productos" id="basic-nav-dropdown" to='/Products'>
+              <Nav className='mx-auto'>
+                  <Nav.Link as={NavLink} to='/' className='fs-5'> Home </Nav.Link>
+                  <NavDropdown title="Productos" id="basic-nav-dropdown" to='/Products' className='fs-5'>
                     <NavDropdown.Item as={NavLink} to='/Products/pedulas' > Pédulas </NavDropdown.Item>
                     <NavDropdown.Item as={NavLink} to='/Products/arneses' > Arneses </NavDropdown.Item>
                     <NavDropdown.Item as={NavLink} to='/Products/mosquetones' > Mosquetones </NavDropdown.Item>
