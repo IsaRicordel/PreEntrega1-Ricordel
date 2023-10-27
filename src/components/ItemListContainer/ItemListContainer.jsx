@@ -4,18 +4,13 @@ import { Link } from 'react-router-dom'
 import { collection,  getDocs, query, where } from "firebase/firestore"
 import {db} from '../../index'
 import GridLoader from "react-spinners/GridLoader"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
-
 
 function ItemListContainer({category, greeting}) {
 
     const [items, setItems]= useState([])
     const [isLoading, setIsLoading] = useState(true)
 
-     //se crea la funcion para poder hacer el filtro ya que el dato en Firebase esta en mayuscula
      function primeraLetraMayuscula(cadena) {
-        // Convierte la primera letra a mayúscula y el resto a minúsculas
         return cadena.charAt(0).toUpperCase() + cadena.slice(1).toLowerCase();
       }
     useEffect(()=>{

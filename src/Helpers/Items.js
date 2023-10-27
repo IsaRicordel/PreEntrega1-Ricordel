@@ -107,8 +107,3 @@ export const Items = [
 
 },
 ]
-
-
-export function getItemById (id) {
-    return Items.find((item) => item.id == id)
-}
